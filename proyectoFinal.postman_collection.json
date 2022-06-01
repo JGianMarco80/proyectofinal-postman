@@ -1,0 +1,162 @@
+{
+	"info": {
+		"_postman_id": "0223032b-bf3d-4ae8-a5ca-5044ec661b78",
+		"name": "proyectoFinal",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "wallet",
+			"item": [
+				{
+					"name": "Save Wallet",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"name\":\"Gian\",\r\n\t\"surnames\":\"Castro Morales\",\r\n\t\"mobile\": 900548775,\r\n\t\"email\":\"correo1@example.com\",\r\n\t\"document\":3123123,\r\n    \"amount\":500,\r\n    \"type\":2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9751",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9751"
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "buy-bootCoin",
+			"item": [
+				{
+					"name": "Buy bootCoin - crear topic",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"amount\":10,\r\n    \"mobile\":932145679,\r\n    \"payMode\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9750",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9750"
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "payment",
+			"item": [
+				{
+					"name": "Save payment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"amount\":10,\r\n    \"externalMobile\":987654321,\r\n    \"mobile\":900548775\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9752",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9752"
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "redis",
+			"item": [
+				{
+					"name": "List buys",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9749/buy",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9749",
+							"path": [
+								"buy"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get buy by id y save responseBuy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9749/buy/3a9002c0-f2cb-4ac0-932c-af048f219b7e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9749",
+							"path": [
+								"buy",
+								"3a9002c0-f2cb-4ac0-932c-af048f219b7e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List responseBuy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9749/responseBuy",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9749",
+							"path": [
+								"responseBuy"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
